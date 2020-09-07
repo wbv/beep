@@ -481,8 +481,8 @@ int main(const int argc, char *const argv[])
      */
     if ((getuid() == 0) || (geteuid() == 0) ||
         (getgid() == 0) || (getegid() == 0)) {
-        LOG_VERBOSE("Running with root permissions. "
-                    "Checking for SUDO_* in environment.");
+        LOG_VERBOSE_NOFMT("Running with root permissions. "
+                          "Checking for SUDO_* in environment.");
         if (getenv("SUDO_COMMAND") || getenv("SUDO_USER") ||
             getenv("SUDO_UID") || getenv("SUDO_GID")) {
             LOG_ERROR("Running as root under sudo, "

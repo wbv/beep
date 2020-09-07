@@ -75,12 +75,14 @@ void log_warning(const char *const module,
 /** Log a verbose message */
 #define LOG_VERBOSE(FORMAT, ...) log_verbose(LOG_MODULE, FORMAT, ##__VA_ARGS__)
 
+/** Log a verbose message with no format string */
+#define LOG_VERBOSE_NOFMT(MSG) log_verbose(LOG_MODULE, MSG)
+
 /** Log a verbose message */
 void log_verbose(const char *const module,
                  const char *const format, ...)
     __attribute__(( nonnull(1, 2) ))
     __attribute__(( format(printf, 2, 3) ));
-
 
 /** Log a range of data */
 void log_data(const void *const buf, const size_t start_ofs, const size_t size)

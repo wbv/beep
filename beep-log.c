@@ -209,7 +209,7 @@ void log_constructor(void)
             }
         }
     }
-    LOG_VERBOSE("log_constructor");
+    LOG_VERBOSE_NOFMT("log_constructor");
 }
 
 

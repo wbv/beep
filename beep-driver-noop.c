@@ -100,7 +100,7 @@ void beep_driver_noop_constructor(void)
 static
 void beep_driver_noop_constructor(void)
 {
-    LOG_VERBOSE("beep_driver_noop_constructor");
+    LOG_VERBOSE_NOFMT("beep_driver_noop_constructor");
     beep_drivers_register(&driver_data);
 }
 

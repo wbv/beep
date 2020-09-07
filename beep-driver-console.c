@@ -175,7 +175,7 @@ void beep_driver_console_constructor(void)
 static
 void beep_driver_console_constructor(void)
 {
-    LOG_VERBOSE("beep_driver_console_constructor");
+    LOG_VERBOSE_NOFMT("beep_driver_console_constructor");
     beep_drivers_register(&driver_data);
 }
 
